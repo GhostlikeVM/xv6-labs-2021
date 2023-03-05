@@ -5,6 +5,11 @@
  * @date 2023.3.1
 */
 
+/**
+ * @note Some mismatch with the guide of xargs and test cases.\
+ * There are two versions of this code, the latter one is able to pass test cases.
+*/
+
 #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "kernel/param.h"
@@ -12,7 +17,6 @@
 #include "kernel/fs.h"
 
 #define XARGS_DEBUG
-// #undef XARGS_DEBUG
 
 /**
  * @note if not optimized, just concat string from input to arg[2] after command\
@@ -224,9 +228,9 @@
 //     }
 //     exit(0);
 // }
+
 #define MAXLINE 32
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     if (argc < 3) {
         fprintf(2, "usage: xargs <command> <argu>");
